@@ -1,0 +1,49 @@
+Первое ДЗ 
+до 30.07.2021
+Linux terminal (GitBash) commands
+
+1) Посмотреть где я - pwd
+2) Создать папку - mkdir dir1
+3) Зайти в папку - cd dir1
+4) Создать 3 папки - mkdir dir11 dir12 dir13 
+5) Зайти в любоую папку - cd dir11
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 1.json 2.json
+
+7) Создать 3 папки - mkdir {01..03}
+
+8. Вывести список содержимого папки - ls -la
+9) + Открыть любой txt файл - vim 1.txt	
+10) + написать туда что-нибудь - i -> who let the dogs out? Woof Woof woof woof
+11) + сохранить и выйти. - esc -> :w -> :q
+12) Выйти из папки на уровень выше - cd ..
+13) переместить любые 2 файла, которые вы создали, в другую папку - mv dir11/2.txt dir12 | mv dir11/3.txt dir12
+14) скопировать любые 2 файла, которые вы создали, в другую папку - cp dir12/2.txt dir11/ | cp dir12/2.txt dir11/		
+15) Найти файл по имени - find -name 1.txt
+16) просмотреть содержимое в реальном времени (команда grep) - 	grep '' 1.txt	
+17) вывести несколько первых строк из текстового файла - head -2 1.txt  
+18) вывести несколько последних строк из текстового файла - tail -2 1.txt
+	
+19) просмотреть содержимое длинного файла (команда less) - less 1.txt 
+20) вывести дату и время - date
+=========
+
+Задание *
+1) Отправить http запрос на сервер - curl https://api.quarantine.country/api/v1/regions
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 -
+
+#!/bin/bash
+string0=dir21
+string1=$string0$'-1'
+string2=$string0$'-2'
+string3=$string0$'-3'
+cd dir21
+mkdir $string1 $string2 $string3
+cd $string1
+touch 1.txt 2.txt 3.txt 4.json 5.json
+mkdir {01..03}
+ls -la
+mv 1.txt 01 | mv 2.txt 01
+
+
+
+
