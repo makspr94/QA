@@ -19,7 +19,7 @@ Linux terminal (GitBash) commands
 13) переместить любые 2 файла, которые вы создали, в другую папку - mv dir11/2.txt dir12 | mv dir11/3.txt dir12
 14) скопировать любые 2 файла, которые вы создали, в другую папку - cp dir12/2.txt dir11/ | cp dir12/2.txt dir11/		
 15) Найти файл по имени - find -name 1.txt
-16) просмотреть содержимое в реальном времени (команда grep) - 	grep '' 1.txt	
+16) просмотреть содержимое в реальном времени (команда grep) - tail -f 1.txt
 17) вывести несколько первых строк из текстового файла - head -2 1.txt  
 18) вывести несколько последних строк из текстового файла - tail -2 1.txt
 	
@@ -32,18 +32,19 @@ Linux terminal (GitBash) commands
 2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13 -
 
 #!/bin/bash
-string0=dir21
+string0=$1 #при запуске указать имя папки для входа
 string1=$string0$'-1'
 string2=$string0$'-2'
 string3=$string0$'-3'
-cd dir21
+cd $1
 mkdir $string1 $string2 $string3
-cd $string1
+cd $(find */ -maxdepth 0 -type d | shuf -n 1) #вход в случайную папку
 touch 1.txt 2.txt 3.txt 4.json 5.json
 mkdir {01..03}
-ls -la
+ls 
 mv 1.txt 01 | mv 2.txt 01
 
+	
 
 
 
