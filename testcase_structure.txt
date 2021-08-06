@@ -1,0 +1,19 @@
+Testcase structure
+
+1. identifier 
+
+2. priority
+
+3. requirement		related requirement doc
+
+4. module (submodule)	parts of the application to which the test case belongs 
+
+5. title 		the main idea (purpose) of the testcase
+			informative very short sentence
+
+6. preconditions
+   preparations
+
+7. steps
+
+8. expected results
