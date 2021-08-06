@@ -1,0 +1,27 @@
+BUG REPORT STRUCTURE
+
+1. identifier	unique
+	
+2. summary 	brief description of the problem in one sentence; 
+		at least, it should explain what happened, where and under what conditions. 
+
+3. description	detailed description of the defect with info about expected and actual results,
+		link to requirements.
+
+4. STR		steps to reproduce 
+
+5. reproducibility	always/sometimes
+
+6. severity 	critical/major/minor/trivial. 
+		Degree of damage to product perfomance (operability)
+
+7. priority 	ASAP/high/normal/low. How quickly the deffect should be fixed. 
+		Degree of influence on business processes and usability. 
+
+8. workaround 	bypass the defect
+ 
+9. comments	additional info
+
+10. attachments	
+
+11. Environment
