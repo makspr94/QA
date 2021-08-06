@@ -1,4 +1,4 @@
-Testcase structure
+TESTCASE STRUCTURE.
 
 1. identifier 
 
@@ -17,3 +17,4 @@ Testcase structure
 7. steps
 
 8. expected results
+
