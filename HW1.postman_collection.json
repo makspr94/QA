@@ -1,0 +1,282 @@
+{
+	"info": {
+		"_postman_id": "1fa21b6a-dcd0-42b6-b310-afb19e4571c0",
+		"name": "HW1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "EP_1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/get_method?name=maksim&age=26",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"get_method"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "maksim"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Maksim",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "450",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/user_info_3",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Maksim",
+							"disabled": true
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"disabled": true
+						},
+						{
+							"key": "Salary",
+							"value": "450",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_1?name=Maksim&weight=84&age=26",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_1"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Maksim"
+						},
+						{
+							"key": "weight",
+							"value": "84"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_2?name=Maksim&age=26&salary=450",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_2"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Maksim"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "salary",
+							"value": "450"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_3?name=Maksim&age=26&salary=450",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_3"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Maksim"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "salary",
+							"value": "450"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_6",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/object_info_4?name=Maksim&age=26&salary=450",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"object_info_4"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Maksim"
+						},
+						{
+							"key": "age",
+							"value": "26"
+						},
+						{
+							"key": "salary",
+							"value": "450"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EP_7",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Максим",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "26",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "300",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/user_info_2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"user_info_2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": ""
+		}
+	]
+}
