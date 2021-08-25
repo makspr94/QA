@@ -5,21 +5,22 @@ SQL-ex.ru
 SELECT model, speed, hd
 FROM pc
 WHERE price < 500
-
 ======================================
 2. Найдите производителей принтеров. Вывести: maker
 
- SELECT DISTINCT maker
+SELECT DISTINCT maker
 FROM product
 WHERE type = 'Printer'
 =====================================
 3. Найдите номер модели, объем памяти и размеры экранов ПК-блокнотов,
 цена которых превышает 1000 дол.
+
 SELECT model, ram, screen
 FROM laptop
 where price > 1000
 =====================================
 4.Найдите все записи таблицы Printer для цветных принтеров.
+
 SELECT *
 FROM printer
 WHERE color = 'y'
@@ -43,6 +44,7 @@ WHERE (product.type = 'laptop') AND (laptop.hd>=10)
 =================================
 7. Найдите номера моделей и цены всех имеющихся в продаже продуктов
  (любого типа) производителя B (латинская буква).
+
 SELECT * FROM
 (SELECT model, price
 FROM laptop
@@ -57,6 +59,7 @@ WHERE
 a.model IN (SELECT model FROM product WHERE maker = 'B')
 ==================================
 8.Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+
 SELECT DISTINCT maker
 FROM PRODUCT
 WHERE type = 'pc'
@@ -66,27 +69,44 @@ FROM PRODUCT
 WHERE type = 'laptop'
 =================================
 9.Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+
 SELECT DISTINCT maker 
 FROM PRODUCT 
 WHERE model IN (SELECT model FROM pc
 WHERE speed >=450)
 =================================
 10.Найдите модели принтеров, имеющих самую высокую цену. Вывести: model, price
+
 SELECT model, price
 FROM printer
 WHERE price = (SELECT max(price) FROM printer )
 =================================
 11.Найдите среднюю скорость ПК.
+
 SELECT AVG(speed)
 FROM pc
 =================================
 12. Найдите среднюю скорость ПК-блокнотов, цена которых превышает 1000 дол.
+
 SELECT AVG(speed)
 FROM laptop
 WHERE price > 1000
 =================================
 13.Найдите среднюю скорость ПК, выпущенных производителем A.
+
 SELECT AVG (speed)
 FROM pc
 WHERE model IN (SELECT model FROM product where maker = 'A')
 =================================
+14.Найдите класс, имя и страну для кораблей 
+из таблицы Ships, имеющих не менее 10 орудий
+
+SELECT classes.class, ships.name, classes.country
+FROM classes
+INNER JOIN ships
+ON classes.class=ships.class
+WHERE Classes.numguns >=10
+=================================
+15.Найдите размеры жестких дисков, совпадающих у 
+двух и более PC. Вывести: HD
+
