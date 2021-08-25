@@ -56,3 +56,37 @@ AS a
 WHERE
 a.model IN (SELECT model FROM product WHERE maker = 'B')
 ==================================
+8.Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+SELECT DISTINCT maker
+FROM PRODUCT
+WHERE type = 'pc'
+EXCEPT
+SELECT maker
+FROM PRODUCT
+WHERE type = 'laptop'
+=================================
+9.Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+SELECT DISTINCT maker 
+FROM PRODUCT 
+WHERE model IN (SELECT model FROM pc
+WHERE speed >=450)
+=================================
+10.Найдите модели принтеров, имеющих самую высокую цену. Вывести: model, price
+SELECT model, price
+FROM printer
+WHERE price = (SELECT max(price) FROM printer )
+=================================
+11.Найдите среднюю скорость ПК.
+SELECT AVG(speed)
+FROM pc
+=================================
+12. Найдите среднюю скорость ПК-блокнотов, цена которых превышает 1000 дол.
+SELECT AVG(speed)
+FROM laptop
+WHERE price > 1000
+=================================
+13.Найдите среднюю скорость ПК, выпущенных производителем A.
+SELECT AVG (speed)
+FROM pc
+WHERE model IN (SELECT model FROM product where maker = 'A')
+=================================
