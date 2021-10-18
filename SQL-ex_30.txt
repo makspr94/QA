@@ -220,6 +220,28 @@ with the lowest RAM capacity and the highest
 processor speed of all PCs having the lowest RAM capacity.
 Result set: maker.
 
+SELECT DISTINCT maker FROM product
+where type = 'printer' and maker in 
+(SELECT distinct maker from product join pc
+on product.model = pc.model 
+where speed = (select max(speed) from pc 
+where ram = (select min(ram) from pc)) 
+and ram = (select min(ram) from pc))
+===========================
+26.Find out the average price of PCs and laptops produced by maker A.
+Result set: one overall average price for all items.
+
+SELECT price from pc join product 
+on product.model = pc.model where maker = 'A' 
+Union 
+Select  price from laptop
+join product 
+on product.model = laptop.model where maker = 'A'
+
+
+
+
+
 
 
 
