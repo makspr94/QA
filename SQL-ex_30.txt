@@ -231,12 +231,22 @@ and ram = (select min(ram) from pc))
 26.Find out the average price of PCs and laptops produced by maker A.
 Result set: one overall average price for all items.
 
-SELECT price from pc join product 
-on product.model = pc.model where maker = 'A' 
-Union 
-Select  price from laptop
-join product 
-on product.model = laptop.model where maker = 'A'
+select avg(price) from (
+Select maker, type, price from pc join
+product on product.model = pc.model where maker = 'A' and price is not null
+union all
+select maker, type, price from laptop join
+product on product.model = laptop.model where maker = 'A' and price is not null
+)this_table
+===========================
+27. Find out the average hard disk drive capacity of PCs produced by makers who also manufacture printers.
+Result set: maker, average HDD capacity.
+
+SELECT distinct maker, avg(hd) as avg_hd from product join pc on product.model = pc.model
+where maker in (SELECT maker from product where type = 'printer')
+group by maker
+=========================
+28. 
 
 
 
