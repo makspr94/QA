@@ -1,5 +1,4 @@
-Первое ДЗ 
-до 30.07.2021
+
 Linux terminal (GitBash) commands
 
 1) Посмотреть где я - pwd
