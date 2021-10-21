@@ -246,8 +246,12 @@ SELECT distinct maker, avg(hd) as avg_hd from product join pc on product.model =
 where maker in (SELECT maker from product where type = 'printer')
 group by maker
 =========================
-28. 
+28.  Using Product table, find out the number of makers who produce only one model.
 
+select count (maker) from (
+select maker from product group by maker having Count (model) = 1
+)this_table
+========================
 
 
 
