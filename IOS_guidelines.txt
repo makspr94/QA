@@ -6,3 +6,7 @@ https://developer.apple.com/app-store/review/guidelines/
 
 app extensions Overview:
 https://developer.apple.com/app-extensions/
+
+
+MY CHECKLIST:
+https://docs.google.com/document/d/15QLiLwcRikRkK8-By5N9AdTpY-M5KFCgaM95JPpnQ6k/edit?usp=sharing
