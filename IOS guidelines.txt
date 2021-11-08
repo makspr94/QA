@@ -1,2 +1,8 @@
 IOS GUIDELINES
 https://developer.apple.com/design/human-interface-guidelines/
+
+App Store Review Guidelines
+https://developer.apple.com/app-store/review/guidelines/
+
+app extensions Overview:
+https://developer.apple.com/app-extensions/
