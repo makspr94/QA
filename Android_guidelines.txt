@@ -4,5 +4,5 @@ https://developer.android.com/docs/quality-guidelines/core-app-quality#ux
 https://habr.com/ru/company/redmadrobot/blog/491674/
 
 
-Android app design checklist:
+Android app  checklist:
 https://docs.google.com/document/d/1hlmcbi6oeqvBBGzShoKuGPDIYFs55JQzyWSj2pH43d4/edit?usp=sharing
