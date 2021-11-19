@@ -1,0 +1,8 @@
+Registration form testing 
+http://itcareer.pythonanywhere.com/
+
+Requirements: https://docs.google.com/document/d/1LDnPygiSekEDbF8rxEBy81nUCakOxUhebT4qPnm0cQ4/edit?usp=sharing
+
+Checklist: https://docs.google.com/spreadsheets/d/12l70yxCTNHYa0tYJiU7JwyrtPwoArsYzzHspjBty0Lg/edit?usp=sharing
+
+bug reports: https://docs.google.com/spreadsheets/d/14Iv8EIgLkyWhZ9LBLBYv-ZQas7i23Oyecz4XwbQPORY/edit?usp=sharing
